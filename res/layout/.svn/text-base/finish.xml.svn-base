@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+
+    <TextView 
+        android:id="@+id/win_state"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/win_state"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/EnergyConsumption"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/win_state"
+        android:text="@string/EnergyConsumption"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/PathLength"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/PathLength"
+        android:layout_below="@+id/EnergyConsumption"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/Sarcasm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Sarcasm"
+        android:layout_below="@+id/PathLength"
+        android:gravity="center"/>
+    <TextView 
+        android:id="@+id/returnButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Sarcasm"
+        android:text="@string/returnButton"
+        android:gravity="center"/>
+    
+
+</RelativeLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/difficultyWords"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+		android:textColor="#FFF"
+        android:text="@string/selectDifficulty" />
+    
+    <SeekBar
+        android:id="@+id/difficulty"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/difficultyWords"
+        android:gravity="center"
+        android:max="15"
+        android:progress="7" />
+    
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/difficulty"
+        android:layout_marginTop="28dp"
+        android:gravity="center" />
+    
+    <CheckBox
+        android:id="@+id/toggleMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showGeneratingScreen"
+        android:layout_below="@+id/level"
+        android:text="@string/toggleMap" />
+    
+   <CheckBox
+        android:id="@+id/showSolution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showGeneratingScreen"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/level"
+        android:text="@string/showSolution" />
+
+    <CheckBox
+        android:id="@+id/showVisibleWalls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showGeneratingScreen"
+        android:layout_below="@+id/toggleMap"
+        android:layout_marginBottom="30dp"
+        
+        android:text="@string/showVisibleWalls" />
+    
+    <TextView
+        android:id="@+id/algorithmWords"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showVisibleWalls"
+        android:layout_alignParentLeft="true"
+        android:text="@string/algorithmSelection" />
+    
+    <Spinner
+        android:id="@+id/algorithm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/algorithmWords"
+        android:entries="@array/algorithm_entries"
+        android:prompt="@string/algorithm_prompt" />
+    
+     <TextView
+        android:id="@+id/robotDriverWords"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/algorithm"
+        android:layout_alignParentLeft="true"
+        android:text="@string/robotDriverSelection" />
+     
+     <Spinner
+        android:id="@+id/robotDriverSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/robotDriverWords"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="30dp"
+        android:entries="@array/robotDriver_entries" />
+     
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showGeneratingScreen"
+        android:layout_below="@+id/robotDriverSpinner"
+        android:layout_alignParentRight="true"
+        android:text="@string/saveButton" />
+
+    <Button
+        android:id="@+id/loadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/saveButton"
+        android:onClick="showGeneratingScreen"
+        android:layout_below="@+id/robotDriverSpinner"
+        android:text="@string/loadButton" />
+     
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/saveButton"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:onClick="showGeneratingScreen"
+        android:text="@string/resetButton" />
+    
+    <Button
+        android:id="@+id/generateMazeButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/resetButton"
+        android:onClick="showGeneratingScreen"
+        android:text="@string/generateMazeButton" />
+
+</RelativeLayout>

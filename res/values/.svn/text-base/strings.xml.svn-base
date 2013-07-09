@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- For main screen -->
+    <string name = "hello">Hello World, AMaze1Activity!</string>
+    <string name = "app_name">Welcome to the AMaze-ing App!</string>
+    <string name = "generateMazeButton">Generate Maze</string>
+    <string name = "generatingScreen">Generating Screen</string>
+    <string name = "selectDifficulty">Select a level</string>
+    
+    <string name = "algorithmSelection">Select algorithm</string>
+    <string name = "algorithm_prompt">Select algorithm</string>
+    <string-array name = "algorithm_entries">
+        <item>Backtracking with rooms</item>
+        <item>Prim\'s Algorithm</item>
+        <item>Kruskal\'s Algorithm</item>
+    </string-array>
+    
+    <string name = "robotDriverSelection">Select robot driver</string>
+    <string name = "robotDriver_prompt">Select robot driver</string>
+    <string-array name = "robotDriver_entries">
+        <item>Manual Driver</item>
+        <item>Curious Gambler</item>
+        <item>Gambler</item>
+        <item>Wall Follower</item>
+        <item>Wizard</item>
+    </string-array>
+    
+    <string name = "loadButton">Load maze</string>
+    <string name = "saveButton">Generate and save</string>
+    <string name = "resetButton">Reset Values</string>
+    
+    
+    <!-- For generating screen -->
+    <string name = "showPlayScreen">Show play</string>
+    
+    
+    <!-- For play screen -->
+    <string name = "playScreen">Play Screen</string>
+    <string name = "batteryLevel">Battery Level: 2500</string>
+    <string name = "solveMazeButton">Solve Maze</string>
+    <string name = "toggleMap">Toggle Map</string>
+    <string name = "showSolution">Show Solution</string>
+    <string name = "showVisibleWalls">Show Visible Walls</string>
+    
+    <!-- For finish screen -->
+    <string name = "finishScreen">Finish Screen</string>
+    <string name = "win_state"> </string>
+    <string name = "returnButton">Push back button to return to title</string>
+    <string name = "EnergyConsumption">Overall energy consumption:  </string>
+    <string name = "PathLength">Path Length:  </string>
+    <string name = "Sarcasm">I bet you enjoyed it.</string>
+</resources>		

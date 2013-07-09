@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="169dp"
+        android:layout_weight="0.69"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/batteryLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/batteryLevel" 
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateOnly="false"
+        android:max="2500" />
+
+<!--     <Button
+        android:id="@+id/solveMaze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showFinishScreen"
+        android:text="@string/solveMazeButton" /> -->
+
+    <CheckBox
+        android:id="@+id/toggleMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showFinishScreen"
+        android:text="@string/toggleMap" />
+
+    <CheckBox
+        android:id="@+id/showSolution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showFinishScreen"
+        android:text="@string/showSolution" />
+
+    <CheckBox
+        android:id="@+id/showVisibleWalls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.08"
+        android:onClick="showFinishScreen"
+        android:text="@string/showVisibleWalls" />
+
+</LinearLayout>

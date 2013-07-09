@@ -1,0 +1,70 @@
+/**
+ * 
+ */
+package edu.wm.cs.cs301.UI;
+
+import edu.wm.cs.cs301.R;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
+import android.widget.Toast;
+
+/**
+ * @author aablohm and jaleo
+ * 
+ * This class is the fourth screen in the AMaze app.  It displays a finish screen for the user that shows
+ * the battery left and the length of the path.  It also provides instructions on how to return to the
+ * main activity.
+ *
+ */
+public class FinishActivity extends Activity{
+	Context context;
+    CharSequence text;
+    int duration;
+	Toast toast;
+	TextView level;
+	TextView length;
+	TextView win_state;
+	private static final String TAG = "TAG_FinishActivity";
+	
+	/**
+	 * Called when the activity is first created. Provides the original setup for the finish activity.
+	 */
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.finish);
+        Intent finishIntent = getIntent();
+
+        level = (TextView) findViewById(R.id.EnergyConsumption);
+        length = (TextView) findViewById(R.id.PathLength);
+        win_state = (TextView) findViewById(R.id.win_state);
+        String consume = finishIntent.getStringExtra("consume");
+        String path = finishIntent.getStringExtra("pathLength");
+        int []i = finishIntent.getIntArrayExtra("win_lose");
+        if (i[0] == 1 ){
+     	    win_state.setText("GAME OVER");
+        	level.setText(consume);
+     	    length.setText(path);
+        	
+        }
+        else {
+        	win_state.setText("YOU WON!!!");
+        	level.setText("Overall energy consumption:  " + consume );
+        	length.setText("Path Length:  " + path);
+        	
+        }
+    }
+    
+    /**
+     * Overrides the back button to go back to the main activity.
+     */
+    @Override
+    public void onBackPressed(){
+    	context = getApplicationContext();
+ 		Log.v(TAG, "Back");
+ 		finish();   
+    }
+}
